@@ -19,6 +19,10 @@ class ArticlesController < ApplicationController
     end
 
   end
+
+  def show
+    @article = Article.find_by(id: params[:id])
+  end
 end
 
 private
