@@ -8,7 +8,7 @@ RSpec.describe "Articles", type: :request do
     @article = Article.create!(title: "Title One", body: "Body of article one", user: @john)
   end
 
-  describe 'GET /articles/:id/edit' do
+  describe ('GET /articles/:id/edit') do
     context 'with non-signed-in user' do
       before do 
         get "/articles/#{@article.id}/edit"

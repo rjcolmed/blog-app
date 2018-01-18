@@ -61,7 +61,7 @@ class ArticlesController < ApplicationController
       redirect_to root_path
     else
       if @article.destroy
-        flash[:success] = 'Article has been deleted'
+        flash[:alert] = 'Your article has been deleted.'
   
         redirect_to articles_path
       end
